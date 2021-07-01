@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.infected-card, .recovered-card, .deaths-card {
+    margin: 2% 2% !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chart-container {
+    width: 70% !important ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.infected-card {
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.recovered-card {
+    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.deaths-card {
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+}
+
+.covid-img, .country-selector {
+    margin: 2% 2% !important;
+}
+
+@media (min-width: 400px) {
+    .country-selector {
+        width: 60% !important;
+    }
+    .infected-card, .recovered-card, .deaths-card {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 1000px) {
+    .infected-card, .recovered-card, .deaths-card {
+        width: 25% !important;
+    }
+    .country-selector {
+        width: 30% !important;
+    }
 }
